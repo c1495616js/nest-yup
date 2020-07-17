@@ -1,0 +1,20 @@
+{
+  "name": "typescript_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon"
+  },
+  "author": "",
+  "license": "ISC"
+}
