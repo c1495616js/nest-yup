@@ -17,7 +17,8 @@
   },
   "scripts": {
     "build": "rimraf ./lib && tsc",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "publish": "npm run build && git add -A && git commit -m \"publish\" && npm version patch && git push && npm publish"
   },
   "author": "",
   "license": "ISC"
