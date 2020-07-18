@@ -16,7 +16,7 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "build": "rimraf ./lib && tsc",
+    "build": "rimraf ./lib && tsc --p tsconfig.build.json",
     "start:dev": "nodemon",
     "publish": "npm run build && git add -A && git commit -m \"publish\" && npm version patch && git push && npm publish"
   },

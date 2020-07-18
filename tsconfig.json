@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "./lib",
+    "rootDir": "./src",
     "module": "commonjs",
     "declaration": true,
     "noImplicitAny": false,
