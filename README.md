@@ -50,6 +50,10 @@ Integrate `Yup` with `Nest.js`.
 - Create your own `yup schema`.
 - Use the decorator `UseSchema`.
 
+```ts
+import { UseSchema } from 'nestjs-yup';
+```
+
 For example:
 
 ```ts
@@ -78,6 +82,22 @@ export class AuthCredentialsDto {
 ```
 
 #### In Controller file
+
+```ts
+import { YupValidationPipe } from 'nestjs-yup';
+```
+
+For example:
+
+```ts
+ @Post('/signup')
+  signUp(
+    @Body(YupValidationPipe)
+    authCredentialsDto: AuthCredentialsDto,
+  ): Promise<void> {
+    return this.authService.signUp(authCredentialsDto);
+  }
+```
 
 ### Installing
 
