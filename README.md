@@ -17,7 +17,6 @@
 - [About](#about)
 - [Demo / Working](#demo)
 - [Usage](#usage)
-- [Getting Started](#getting_started)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
