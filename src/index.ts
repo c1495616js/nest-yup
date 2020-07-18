@@ -1,7 +1,2 @@
-interface IProps {
-  name: string;
-}
-
-const a: IProps = { name: 'hi' };
-
-console.log(a);
+export { YupValidationPipe } from './pipe/yup-validation.pipe';
+export { UseSchema } from './decorator/useSchema.decorator';
