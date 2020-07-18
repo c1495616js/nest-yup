@@ -1,37 +1,23 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/FxL5qM0.jpg" alt="Bot logo"></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-<h3 align="center">Nest.js-Yup</h3>
+<h3 align="center">Nest.js + Yup</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![Platform](https://img.shields.io/badge/platform-reddit-orange.svg)](https://www.reddit.com/user/Wordbook_Bot)
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> 🤖 Few lines describing what your bot does.
-    <br> 
-</p>
-
 ## 📝 Table of Contents
 
 - [About](#about)
 - [Demo / Working](#demo)
-- [How it works](#working)
 - [Usage](#usage)
 - [Getting Started](#getting_started)
-- [Deploying your own bot](#deployment)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -41,7 +27,7 @@ Integrate `Yup` with `Nest.js`.
 
 ## 🎥 Demo / Working <a name = "demo"></a>
 
-![Working](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
+![](https://i.imgur.com/G8XBhJB.png)
 
 ## 🎈 Usage <a name = "usage"></a>
 
@@ -105,15 +91,35 @@ For example:
 npm i nestjs-yup
 ```
 
+Don't forget to install `yup` as well.
+
+```
+npm i yup
+npm i -D @types/yup
+```
+
+### Quick Example
+
+Please go to `example` folder.
+
+```
+npm run start:dev
+```
+
+or running via docker
+
+```
+docker-compose up
+```
+
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- [@c1495616js](https://github.com/c1495616js) - Idea & Initial work
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
-  https://dev.to/nestjs/publishing-nestjs-packages-with-npm-21fm
+#### References
+
+- https://www.npmjs.com/package/nestjs-yup-validator
+- https://www.youtube.com/watch?v=cmZcZb0qxqg
+- https://dev.to/nestjs/publishing-nestjs-packages-with-npm-21fm
