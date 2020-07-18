@@ -33,7 +33,7 @@ export class YupValidationPipe implements PipeTransform {
     try {
       await schema.validate(value, { abortEarly: false });
     } catch (err) {
-      throw new BadRequestException(serializeValidationError(err));
+      throw new BadRequestException('error hi');
     }
     return value;
   }
