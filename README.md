@@ -116,3 +116,4 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Hat tip to anyone whose code was used
 - Inspiration
 - References
+  https://dev.to/nestjs/publishing-nestjs-packages-with-npm-21fm

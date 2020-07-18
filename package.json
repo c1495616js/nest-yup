@@ -1,12 +1,8 @@
 {
   "name": "nestjs-yup",
   "version": "1.0.6",
-  "description": "",
+  "description": "nest.js + yup validation",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
   "dependencies": {
     "@nestjs/common": "^7.3.2",
     "yup": "^0.29.1"
