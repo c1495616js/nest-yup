@@ -10,8 +10,8 @@ export class AppController {
   @Post()
   async getHello(
     @Body(YupValidationPipe) dto: AuthCredentialsDto,
-  ): Promise<string> {
-    console.log(dto);
-    return 'Hello Yup';
+  ): Promise<AuthCredentialsDto> {
+    return dto;
   }
+
 }
