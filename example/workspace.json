@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "projects": {
+    "signup": {
+      "root": "apps/signup",
+      "sourceRoot": "apps/signup/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/signup",
+            "index": "apps/signup/src/index.html",
+            "main": "apps/signup/src/main.tsx",
+            "polyfills": "apps/signup/src/polyfills.ts",
+            "tsConfig": "apps/signup/tsconfig.app.json",
+            "assets": ["apps/signup/src/favicon.ico", "apps/signup/src/assets"],
+            "styles": [],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/signup/src/environments/environment.ts",
+                  "with": "apps/signup/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "signup:build",
+            "proxyConfig": "apps/signup/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "signup:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/signup/tsconfig.app.json",
+              "apps/signup/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/signup/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/signup/jest.config.js",
+            "tsConfig": "apps/signup/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "signup-e2e": {
+      "root": "apps/signup-e2e",
+      "sourceRoot": "apps/signup-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/signup-e2e/cypress.json",
+            "tsConfig": "apps/signup-e2e/tsconfig.e2e.json",
+            "devServerTarget": "signup:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "signup:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": ["apps/signup-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/signup-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "nest": {
+      "root": "apps/nest",
+      "sourceRoot": "apps/nest/src",
+      "projectType": "application",
+      "prefix": "nest",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/nest",
+            "main": "apps/nest/src/main.ts",
+            "tsConfig": "apps/nest/tsconfig.app.json",
+            "assets": ["apps/nest/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/nest/src/environments/environment.ts",
+                  "with": "apps/nest/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "nest:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/nest/tsconfig.app.json",
+              "apps/nest/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/nest/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/nest/jest.config.js",
+            "tsConfig": "apps/nest/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "schema": {
+      "root": "libs/schema",
+      "sourceRoot": "libs/schema/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/schema/tsconfig.lib.json",
+              "libs/schema/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/schema/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/schema/jest.config.js",
+            "tsConfig": "libs/schema/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "schematics": {
+    "@nrwl/react": {
+      "application": {
+        "style": "@emotion/styled",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "@emotion/styled"
+      },
+      "library": {
+        "style": "@emotion/styled",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "signup"
+}
