@@ -1,2 +1,2 @@
-import { SchemaOf } from 'yup';
-export declare function UseSchema(schema: SchemaOf<{}>): (constructor: Function) => void;
+import { Schema } from 'yup';
+export declare function UseSchema(schema: Schema<{}>): (constructor: Function) => void;
