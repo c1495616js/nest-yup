@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/c1495616js/nestjs-yup"
+    "url": "https://github.com/c1495616js/nest-yup"
   },
   "dependencies": {
     "@nestjs/common": "7.6.13",
