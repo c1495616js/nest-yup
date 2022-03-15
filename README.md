@@ -12,6 +12,10 @@
 
 ---
 
+## Alert
+
+The [original one](https://www.npmjs.com/package/nestjs-yup) is using my previous company email, I am not able to update this. So, I move this to my personal account and rename to `nest-yup`.
+
 ## 📝 Table of Contents
 
 - [About](#about)

@@ -1,6 +1,6 @@
 {
-  "name": "nestjs-yup",
-  "version": "1.0.14",
+  "name": "nest-yup",
+  "version": "1.0.0",
   "description": "nest.js + yup validation",
   "main": "lib/index.js",
   "dependencies": {
