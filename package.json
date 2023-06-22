@@ -8,13 +8,13 @@
     "url": "https://github.com/c1495616js/nest-yup"
   },
   "dependencies": {
-    "@nestjs/common": "7.6.13",
-    "yup": "0.32.11"
+    "@nestjs/common": "10.0.3",
+    "yup": "1.2.0"
   },
   "devDependencies": {
-    "@types/node": "14.14.33",
-    "@types/yup": "0.29.13",
-    "nodemon": "2.0.4",
+    "@types/node": "18.0.0",
+    "@types/yup": "0.32.0",
+    "nodemon": "2.0.22",
     "rimraf": "3.0.2",
     "ts-node": "9.1.1",
     "typescript": "4.2.3"
